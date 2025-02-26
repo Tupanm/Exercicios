@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class main {
+static Scanner sc = new Scanner(System.in);
+  public static void main(String[] args) {
+    int n1;
+    
+    System.out.println("------------------ Bem Vindo a Calculadora Fatorial ------------------\n");
+    System.out.println("Digite um numero:\n");
+    n1 = sc.nextInt();
+
+    if (n1 < 0) {
+      System.out.println("Número inválido! Programa encerrado.\n");
+    }
+    else{
+      System.out.println("O fatorial de " + n1 + " é: " + calcFat(n1));;
+    }
+
+  }
+
+  public static int calcFat(int n1) {
+    int fatorial = 1;
+    for(int i = n1;i >= 1; i--){
+      fatorial *= i;
+    }
+    return fatorial;
+  }
+}
